@@ -4,15 +4,15 @@ const assertEqual = function(actual, expected) {
   const fail = '❌❌❌ Assertion Failed';
   if (actual === expected) {
     if (typeof actual === "string") {
-      console.log(pass + ': "' + actual + '" === "' + expected + '"');
+      console.log(`${pass}: "${actual}" === "${expected}"`);
     } else {
-      console.log(pass + ": " + actual + " === " + expected);
+      console.log(`${pass}: ${actual} === ${expected}`);
     }
   } else {
     if (typeof actual === "string") {
-      console.log(fail + ': "' + actual + '" !=== "' + expected + '"');
+      console.log(`${fail}: "${actual}" !=== "${expected}"`);
     } else {
-      console.log(fail + ": " + actual + " !=== " + expected);
+      console.log(`${fail}: ${actual} !=== ${expected}`);
     }
   }
 };
