@@ -10,13 +10,13 @@ const eqArrays = function(arr1, arr2) {
   return true;
 };
 
-const assertArrayEqual = function(array1, array2) {
+const assertArraysEqual = function(array1, array2) {
   const pass = '✔️✔️✔️ Assertion Passed';
   const fail = '❌❌❌ Assertion Failed';
   eqArrays(array1, array2) ? console.log(pass) : console.log(fail);
 };
 
-assertArrayEqual([1, 2, 3], [1, 2, 3]); // pass
-assertArrayEqual([1, 2, 3], [3, 2, 1]); // fail
-assertArrayEqual(["1", "2", "3"], ["1", "2", "3"]); // pass
-assertArrayEqual(["1", "2", "3"], ["1", "2", 3]); // fail
+assertArraysEqual([1, 2, 3], [1, 2, 3]); // pass
+assertArraysEqual([1, 2, 3], [3, 2, 1]); // fail
+assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]); // pass
+assertArraysEqual(["1", "2", "3"], ["1", "2", 3]); // fail
