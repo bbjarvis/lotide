@@ -1,3 +1,9 @@
+/*  function take an array and returns the tail of it
+*/
+const tail = function(array) {
+  return array.slice(1);
+};
+
 /*  function takes in two args and checkes if they are equal, returns message:
     "Assertion Passed: [actual] === [expected]" or
     "Assertion Failed: [actual] !=== [expected]"
@@ -21,13 +27,12 @@ const assertEqual = function(actual, expected) {
     }
   }
 };
-/*  Function takes in an array and returns the first element
-*/
-const head = function(array) {
-  return array ? array[0] : undefined;
-};
-assertEqual(head([5, 6, 7]), 5);
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
-assertEqual(head([5, 6, 7]), 6);
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Labs");
-assertEqual(head([]), 6);
+// Test Case: Check the original array
+const words = ["Yo Yo", "Lighthouse", "Labs"];
+tail(words); // no need to capture the return value since we are not checking it
+assertEqual(words.length, 3); // original array should still have 3 elements!
+
+const result = tail(["Hello", "Lighthouse", "Labs"]);
+assertEqual(result.length, 2); // ensure we get back two elements
+assertEqual(result[0], "Lighthouse"); // ensure first element is "Lighthouse"
+assertEqual(result[1], "Labs"); // ensure second element is "Labs"

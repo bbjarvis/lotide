@@ -21,13 +21,31 @@ const assertEqual = function(actual, expected) {
     }
   }
 };
-/*  Function takes in an array and returns the first element
-*/
-const head = function(array) {
-  return array ? array[0] : undefined;
+ /* compare two arrays and return "true" or "false" if perfect match
+ */
+const eqArrays = function(arr1, arr2) {
+  let match = true;
+  for (const arr1s of arr1) {
+    for (const arr2s of arr2) {
+      if (arr2s !== arr1s) {
+        math = false;
+        break;        
+      }
+    }
+  }
+  return match;
 };
-assertEqual(head([5, 6, 7]), 5);
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
-assertEqual(head([5, 6, 7]), 6);
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Labs");
-assertEqual(head([]), 6);
+assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
+//console.log("should Pass");
+
+assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true) // => true
+//console.log("should Pass");
+
+assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false) // => false
+//console.log("should Fail");
+
+assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true) // => true
+//console.log("should Pass");
+
+assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false) // => false
+//console.log("should Fail");

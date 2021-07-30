@@ -1,4 +1,9 @@
-//fucntion implementation
+/*  function takes in two args and checkes if they are equal, returns message:
+    "Assertion Passed: [actual] === [expected]" or
+    "Assertion Failed: [actual] !=== [expected]"
+    also checks if the arg is string and if so returns the message along with the string
+    quotation marks.
+*/
 const assertEqual = function(actual, expected) {
   const pass = '✔️✔️✔️ Assertion Passed';
   const fail = '❌❌❌ Assertion Failed';
