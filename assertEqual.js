@@ -7,6 +7,7 @@
 const assertEqual = function(actual, expected) {
   const pass = '✔️✔️✔️ Assertion Passed';
   const fail = '❌❌❌ Assertion Failed';
+  // added check for string, as the example had quotation marks for strings
   if (actual === expected) {
     if (typeof actual === "string") {
       console.log(`${pass}: "${actual}" === "${expected}"`);
