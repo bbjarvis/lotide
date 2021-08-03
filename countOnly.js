@@ -1,20 +1,3 @@
-const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
-
-const assertArraysEqual = function(array1, array2) {
-  const pass = '✔️✔️✔️ Assertion Passed';
-  const fail = '❌❌❌ Assertion Failed';
-  eqArrays(array1, array2) ? console.log(pass) : console.log(fail);
-};
 /*  function takes in two args and checkes if they are equal, returns message:
     "Assertion Passed: [actual] === [expected]" or
     "Assertion Failed: [actual] !=== [expected]"
@@ -39,18 +22,18 @@ const assertEqual = function(actual, expected) {
     }
   }
 };
-/*  Takes an array and an object. 
-    Returns an object containing counts of everything that the input object listed 
+/*  Takes an array and an object.
+    Returns an object containing counts of everything that the input object listed
 */
 const countOnly = function(allItems, itemsToCount) {
   let results = {};
 
-      for (const item of allItems) {     
-        for (const key in itemsToCount) {
-          if ((key === item) && itemsToCount[key]) {
-            results.hasOwnProperty(item) ? results[key] += 1 : results[key] = 1
-          }   
-      }    
+  for (const item of allItems) {
+    for (const key in itemsToCount) {
+      if ((key === item) && itemsToCount[key]) {
+        results.hasOwnProperty(item) ? results[key] += 1 : results[key] = 1;
+      }
+    }
   }
   return results;
 };
@@ -69,6 +52,7 @@ const firstNames = [
 
 const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
 
+// console.lot(result1);
 assertEqual(result1["Jason"], 1);
 assertEqual(result1["Karima"], undefined);
 assertEqual(result1["Fang"], 2);
