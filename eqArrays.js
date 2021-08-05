@@ -23,17 +23,16 @@ const assertEqual = function(actual, expected) {
 };
  /* compare two arrays and return "true" or "false" if perfect match
  */
-const eqArrays = function(arr1, arr2) {
-  let match = true;
-  for (const arr1s of arr1) {
-    for (const arr2s of arr2) {
-      if (arr2s !== arr1s) {
-        math = false;
-        break;        
-      }
-    }
+ const eqArrays = function(arr1, arr2) {
+  if (arr1.length !== arr2.length) {
+    return false;
   }
-  return match;
+	for (let i = 0; i < arr1.length; i++) {
+		if (arr2[i] !== arr1[i]) {
+			return false;
+		}
+	}
+	return true;
 };
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
 //console.log("should Pass");
