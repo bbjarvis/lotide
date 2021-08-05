@@ -16,9 +16,9 @@ const assertEqual = function(actual, expected) {
     }
   } else {
     if (typeof actual === "string") {
-      console.log(`${fail}: "${actual}" !=== "${expected}"`);
+      console.log(`${fail}: "${actual}" !== "${expected}"`);
     } else {
-      console.log(`${fail}: ${actual} !=== ${expected}`);
+      console.log(`${fail}: ${actual} !== ${expected}`);
     }
   }
 };
