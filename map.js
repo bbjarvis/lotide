@@ -23,7 +23,7 @@ const eqArrays = function(arr1, arr2) {
   for (let i = 0; i < arr1.length; i++) {
     if (arr1[i] !== arr2[i]) {
       return false;
-    } 
+    }
   }
   return true;
 };
@@ -42,7 +42,7 @@ const results1 = map(words, word => word[0]);
 const myName = ['Brett'];
 const results2 = map(myName, word => word[0]);
 console.log(results2);
-const numbers = [1, 2, 3]
+const numbers = [1, 2, 3];
 const results3 = map(numbers, word => word[0]);
 console.log(results3);
 // pass
