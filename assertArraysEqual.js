@@ -1,3 +1,5 @@
+/* compare two arrays and return "true" or "false" if perfect match
+ */
 const eqArrays = function(arr1, arr2) {
   if (arr1.length !== arr2.length) {
     return false;
@@ -10,6 +12,9 @@ const eqArrays = function(arr1, arr2) {
   return true;
 };
 
+/*  Compares 2  arrays using "eqArrays" and return a pass/fail
+    message
+*/
 const assertArraysEqual = function(actual, expected) {
   const pass = '✔️✔️✔️ Assertion Passed';
   const fail = '❌❌❌ Assertion Failed';
