@@ -8,15 +8,8 @@ const findKey = (object, callback) => {
     console.log(object[key].stars)
     if (callback(object[key])) {
       return key;
-    }
-  }
-}
-const findKeyByValue = (object1, value) => {
- 
-  for (const iterator in object1) {
-    if (object1[iterator] === value) {
-      return iterator;
-    }
+    }           
+    
   }
 };
 
