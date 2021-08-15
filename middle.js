@@ -1,4 +1,3 @@
-
 const middle = function(array) {
   let newArray = [];
   if (array.length <= 2) {
