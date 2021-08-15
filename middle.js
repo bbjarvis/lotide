@@ -1,3 +1,5 @@
+//  takes array, returns middle element(s)
+
 const middle = function(array) {
   let newArray = [];
   if (array.length <= 2) {
