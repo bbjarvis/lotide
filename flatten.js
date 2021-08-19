@@ -1,21 +1,4 @@
-const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
-
-const assertArraysEqual = function(array1, array2) {
-  const pass = '✔️✔️✔️ Assertion Passed';
-  const fail = '❌❌❌ Assertion Failed';
-  eqArrays(array1, array2) ? console.log(pass) : console.log(fail);
-};
-
+//   function that takes in an array that contains elements including nested array of elements and returns a flattened version of the array.
 const flatten = function(array) {
   let flatarray = [];
   for (const index of array) {
@@ -29,4 +12,6 @@ const flatten = function(array) {
   }
   return flatarray;
 };
+module.exports = flatten;
+
 console.log(flatten([1, 2, [3, 4], 5, [6]])); // => [1, 2, 3, 4, 5, 6]
